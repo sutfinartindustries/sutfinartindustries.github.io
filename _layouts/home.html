@@ -1,0 +1,130 @@
+---
+layout: default
+---
+<style>
+.navbar {
+	margin-bottom:0;
+}
+.jumbotron {
+	padding: 20px 0;
+	margin:0;
+	background-color: rgba(0,0,0,0);
+}
+.jumbotron p {
+	text-align: center;
+	color:#999;
+	width:100%;
+}
+@media (min-width:455px) {
+	.jumbotron p {
+		width:88%;
+}}
+.jumbotron img {
+	margin: 0 auto;
+	display: block;
+}
+div.marketing {
+	margin-bottom: 50px;
+	white-space: nowrap;
+}
+.marketing .col-lg-4 {
+  text-align: center;
+	margin: 0 0 30px;
+}
+.marketing h2 {
+  color: #fff;
+}
+.btn-default:hover {
+	background-color: #ccc;
+}
+.featurette-divider {
+  border-color: #383838;
+}
+.featurette {
+	padding: 0px 15px;
+}
+.featurette-heading {
+  color: #fff;
+	margin: 0 0 20px;
+}
+a div.featurette p.lead {
+	color: #999;
+}
+a .featurette:hover h3 span.text-muted {
+	color: #940b10;
+}
+</style>
+<!--Welcome-->
+<div class="jumbotron">
+<div class="container">
+	<img src="{{ "/img/logo-header-banner-large.png" | relative_url }}" width="100%" alt="Sutfin Art Industries Logo">
+	<p class="pull-right">Welcome. We specialize in the design, production and installation of visual art. Please have a look at our galleries to see the types of work we do and contact us if you have any questions or would like more information. Thank you.</p>
+</div>
+</div>
+<!-- Website categories and featurettes
+================================================== -->
+<div class="container marketing">
+  <!-- Three columns -->
+  <div class="row">
+    <div class="col-sm-4 col-lg-4">
+      <a href="{{ "/visual-art/" | relative_url }}"><img class="img-thumbnail" src="{{ "/img/terri-painting-flower.jpg" | relative_url }}" width="250" alt=""></a>
+      <h2>Visual Art</h2>
+      <p>Design, Illustration, Ink, Murals and Paintings</p>
+      <p><a class="btn btn-default" href="{{ "/visual-art/" | relative_url }}" role="button">View Art &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-sm-4 col-lg-4">
+      <a href="{{ "/projects-and-branding/" | relative_url }}"><img class="img-thumbnail" src="{{ "/img/reese-and-terri-on-ladder.jpg" | relative_url }}" width="250" alt=""></a>
+      <h2>Projects & Branding</h2>
+      <p>Custom Themes and Art Installations</p>
+      <p><a class="btn btn-default" href="{{ "/projects-and-branding/" | relative_url }}" role="button">View Projects & Branding &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-sm-4 col-lg-4">
+      <a href="{{ "/custom-signs-and-cutouts/" | relative_url }}"><img class="img-thumbnail" src="{{ "/img/cut-out-goat.jpg" | relative_url }}" width="250" alt=""></a>
+      <h2>Custom Signs & Cutouts</h2>
+      <p>Hand-Crafted Signs</p>
+      <p><a class="btn btn-default" href="{{ "/custom-signs-and-cutouts/" | relative_url }}" role="button">View Signs & Cutouts &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+</div>
+  <!-- START THE FEATURETTES -->
+	<div class="container">
+	<h1 class="featurette-heading">Recent Projects</h1>
+  <hr class="featurette-divider">
+	<a href="{{ "/projects-and-branding/grand-lake-lodge-rocky-mtn-national-park-co/" | relative_url }}">
+	<div class="row featurette">
+    <div class="col-sm-5">
+				<h2 class="featurette-heading">Grand Lake Lodge -project</h2>
+				<p class="lead">Rocky Mtn. National Park, CO</p>
+      	<h3><span class="text-muted">Image Gallery</span></h3>
+			<p class="lead">Grand Lakes Lodge is a nationally recognized historical building, located in the Rocky Mountain National Park, in Grand Lake, CO. Our work there included; painting five murals, the curation of a permanent display of historical photographs, design support, color consulting and overseeing the clean up, repair and installation of a large collection of taxidermy.</p>
+    </div>
+    <div class="col-sm-7">
+      	<img class="featurette-image img-responsive pull-right" src="{{ "/img/grand-lake-lodge-recent-projects.jpg" | relative_url }}" width="500" alt="Grand Lake Lodge painting Osprey mural" title="Grand Lake Lodge painting Osprey mural">
+    </div>
+  </div></a>
+  <hr class="featurette-divider">
+  <div class="row featurette">
+		<div class="col-sm-5 col-sm-push-7">
+			<h2 class="featurette-heading">"What a Wonderful World" -mural</h2>
+			<h3><span class="text-muted">Timelapse Video</span></h3>
+			<p class="lead">Created for the Sideways Inn located in Buellton, California. The mural celebrates the music of Louis Armstrong and his song titled &quot;What a Wonderful World.&quot; Check out the timelapse video of its creation.</p>
+		</div>
+		<div class="col-sm-7 col-sm-pull-5">
+			<iframe src="https://player.vimeo.com/video/226059872" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+  </div>
+	<hr class="featurette-divider">
+		<a href="{{ "/visual-art/mural-gallery/ode-to-arches-national-park-moab-utah/" | relative_url }}">
+  <div class="row featurette">
+    <div class="col-sm-6">
+			<h2 class="featurette-heading">"Ode to Arches" -mural</h2>
+			<h3><span class="text-muted">Image Gallery</span></h3>
+      <p class="lead">Created for Canyonlands RV Resort located in Moab, Utah. The mural is a tribute to many of the scenic wonders that are in Arches National Park.</p>
+    </div>
+    <div class="col-sm-6">
+				<img class="featurette-image img-responsive pull-right" src="{{ "/img/recent-project-th.jpg" | relative_url }}" width="500" alt="Ode to Arches National Park Mural" title="Ode to Arches National Park Mural">
+    </div>
+  </div></a>
+  <hr class="featurette-divider">
+</div>
+  <!-- /END THE FEATURETTES -->

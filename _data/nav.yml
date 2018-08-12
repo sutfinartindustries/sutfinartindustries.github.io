@@ -1,0 +1,23 @@
+
+- title: "Home"
+  href: "/index.html"
+
+- title: "Visual Art"
+  href: "/visual-art/"
+  subcategories:
+    - subtitle: "Mural Gallery"
+      subhref: "/visual-art/mural-gallery/"
+    - subtitle: "Paintings on Panel"
+      subhref: "/visual-art/paintings-on-panel/"
+    - subtitle: "Commissions"
+      subhref: "/visual-art/commissions/"
+    - subtitle: "Fine Arts"
+      subhref: "/visual-art/fine-arts/"
+    - subtitle: "Graphic Art & Design"
+      subhref: "/visual-art/graphic-art-and-design/"
+
+- title: "Projects & Branding"
+  href: "/projects-and-branding/"
+
+- title: "Custom Signs & Cutouts"
+  href: "/custom-signs-and-cutouts/"

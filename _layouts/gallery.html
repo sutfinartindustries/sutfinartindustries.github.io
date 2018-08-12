@@ -1,0 +1,45 @@
+---
+layout: page
+---
+<style>
+h2 {
+	color:#fff;
+	margin:20px 0 20px 15px;
+}
+h4 {
+	padding-left: 15px;
+}
+p {
+	color: #bbb;
+	font-size: medium;
+	max-width: 460px;
+	margin: 0 0 15px 15px;
+}
+.links {
+	padding-left: 15px;
+}
+.links a img {
+	margin:0 15px 15px 0;
+	max-height: 200px;
+	max-width: 100%;
+}
+</style>
+			<h2>{{ page.title }}</h2>
+			<h4>{{ page.location }}</h4>
+		<p>{{ page.description }}</p>
+	<!-- The container for the list of gallery images -->
+	<div id="links" class="links">
+    {% for art in page.arts %}
+	<a href="{{ site.galimgdir }}{{ page.permalink }}{{ art.image }}" title="{{ art.title }}"><img src="{{ site.galimgdir }}{{ page.permalink }}{{ art.image }}" alt="{{ art.title }}"></a>
+		{% endfor %}
+  </div>
+	<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+	<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+		<div class="slides"></div>
+		<h3 class="title"></h3>
+		<a class="prev">‹</a>
+		<a class="next">›</a>
+		<a class="close">×</a>
+		<a class="play-pause"></a>
+		<ol class="indicator"></ol>
+	</div>
