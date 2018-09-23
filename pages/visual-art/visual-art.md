@@ -1,6 +1,6 @@
 ---
 layout: menu-marketing
 title: Visual Art
-description: "Design, Illustration, Ink, Murals and Paintings"
+description: "Design, Graphic Art and Murals"
 permalink: /visual-art/
 ---
