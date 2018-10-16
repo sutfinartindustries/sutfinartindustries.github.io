@@ -7,6 +7,8 @@ permalink: /visual-art/mural-gallery/buellton-buellton-ca/
 thumbnail: buellton-th.jpg
 category: paintings-on-panel
 arts:
+- image: 0-buellton-mural-close-up.jpg
+  title: "'Buellton' mural close up"
 - image: 1-buellton-mural-close-up.jpg
   title: "'Buellton' mural close up"
 - image: 2-buellton-terri-painting.jpg
