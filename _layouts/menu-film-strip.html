@@ -23,7 +23,9 @@ div.film-strip p span {
   font-size: small;
 }
 </style>
+<div class="container">
 	<h1>{{ page.title }}</h1>
+  <div class="row">
 {% for p in site.pages %}
 		{% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
 		{% capture num_parts %}{{ url_parts | number_of_words }}{% endcapture %}
@@ -31,9 +33,9 @@ div.film-strip p span {
 		{% capture p_num_parts %}{{ p_url_parts | number_of_words | minus: 1 }}{% endcapture %}
 		{% if p.title != page.title and p.permalink contains page.permalink and num_parts == p_num_parts %}
 		{% unless p.archive %}
-			<div class="col-md-2 col-sm-3 col-xs-6 film-strip">
-			<a href="{{ p.url | relative_url }}">
-				<img class="img-responsive center-block" src="{{ site.galimgdir }}{{ p.permalink }}{{ p.thumbnail }}">
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 film-strip">
+			<a class="mx-auto" href="{{ p.url | relative_url }}">
+				<img class="image-fluid mx-auto d-block" src="{{ site.galimgdir }}{{ p.permalink }}{{ p.thumbnail }}">
 				<p>'{{ p.title }}'</p>
 				<p><span>{{ p.location }}<span></p>
 			</a>
@@ -43,5 +45,5 @@ div.film-strip p span {
 		{% endif %}
 
 {% endfor %}
-<div class="container">
+</div>
 </div>

@@ -1,98 +1,98 @@
-<style>
-nav.navbar-inverse {
-  margin-bottom: 0px;
-  background-color: #181818;
-}
-.dropdown-menu li a:hover {
-  background-color: #ccc;
-}
-</style>
 <!-- Navbar -->
-<nav id="homeNavbar" class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">{{ site.title }}</a>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+          <img src="/img/sai-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          {{ site.title }}
+        </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
 	{% for nav in site.data.nav %}
 	  {% if nav.subcategories != null %}
     {% if nav.title == page.title or page.url contains nav.href %}
-	    <li class="dropdown active">
+	    <li class="nav-item active">
     {% else %}
-    <li class="dropdown">
+    <li class="nav-item dropdown">
       {% endif %}
-	      <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nav.title }}<span class="caret"></span></a>
-		<ul class="dropdown-menu" role="menu">
-      <li class="dropdown-header">{{ nav.title }}</li>
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ nav.title }}<span class="caret">
+        </a>
+		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 		  {% for subcategory in nav.subcategories %}
-		    <li><a href="{{ site.github.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+		  <a class="dropdown-item" href="{{ site.github.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
 		  {% endfor %}
-		</ul>
+    </div>
 	    </li>
 	{% elsif nav.external-subcategories != null %}
-  	    <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nav.title }}<span class="caret"></span></a>
-<ul class="dropdown-menu" role="menu">
-<li class="dropdown-header">{{ nav.title }}</li>
+  	    <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ nav.title }}<span class="caret">
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 		  {% for subcategory in nav.external-subcategories %}
-		    <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+		    <a class="dropdown-item" href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
 		  {% endfor %}
-		</ul>
+		</div>
 	    </li>
 		{% elsif nav.title == page.title or page.url contains nav.href %}
-		  <li class="active"><a href="{{ nav.href }}">{{ nav.title }}</a></li>
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ nav.href }}">{{ nav.title }} <span class="sr-only">(current)</span></a>
+      </li>
 		{% else %}
 		  {% if nav.href %}
-		  <li class="header-nav"><a href="{{ site.github.url }}{{ nav.href }}">{{ nav.title }}</a></li>
+		  <li class="nav-item">
+        <a class="nav-link" href="{{ site.github.url }}{{ nav.href }}">{{ nav.title }}</a>
+      </li>
 		    {% elsif nav.external %}
-		    <li class="header-nav"><a href="{{ nav.external }}">{{ nav.title }}</a></li>
+		    <li class="header-nav">
+          <a class="nav-link" href="{{ nav.external }}">{{ nav.title }}</a>
+        </li>
 		  {% endif %}
 	  {% endif %}
 	{% endfor %}
 </ul>
 <!-- right nav -->
-<ul class="nav navbar-nav navbar-right">
+        <ul class="navbar-nav navbar-right">
   {% for nav in site.data.navr %}
 	  {% if nav.subcategories != null %}
-	    <li class="dropdown">
-	      <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nav.title }}<span class="caret"></span></a>
-		<ul class="dropdown-menu" role="menu">
-      <li class="dropdown-header">{{ nav.title }}</li>
+	   <li class="nav-item dropdown dropleft">
+       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           {{ nav.title }}<span class="caret">
+         </a>
+		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 		  {% for subcategory in nav.subcategories %}
-		    <li><a href="{{ site.github.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+		    <a class="dropdown-item" href="{{ site.github.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
 		  {% endfor %}
-		</ul>
+		</div>
 	    </li>
 	{% elsif nav.external-subcategories != null %}
-  	    <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ nav.title }}<span class="caret"></span></a>
-<ul class="dropdown-menu" role="menu">
-<li class="dropdown-header">{{ nav.title }}</li>
+  	     <li class="nav-item dropdown dropleft">
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               {{ nav.title }}<span class="caret">
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
 		  {% for subcategory in nav.external-subcategories %}
-		    <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+		    <a class="dropdown-item" href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a>
 		  {% endfor %}
-		</ul>
+		</div>
 	    </li>
 		{% elsif nav.title == page.title %}
-		  <li class="active"><a href="{{ nav.href }}">{{ nav.title }}</a></li>
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ nav.href }}">{{ nav.title }} <span class="sr-only">(current)</span></a>
+      </li>
 		{% else %}
 		  {% if nav.href %}
-		  <li class="header-nav"><a href="{{ site.github.url }}{{ nav.href }}">{{ nav.title }}</a></li>
-		    {% elsif nav.external %}
-		    <li class="header-nav"><a href="{{ nav.external }}">{{ nav.title }}</a></li>
-		  {% endif %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.github.url }}{{ nav.href }}">{{ nav.title }}</a>
+      </li>		    {% elsif nav.external %}
+      <li class="header-nav">
+        <a class="nav-link" href="{{ nav.external }}">{{ nav.title }}</a>
+      </li>		  {% endif %}
 	  {% endif %}
 	{% endfor %}
 </ul>
-</div>
 </div>
 </nav>

@@ -5,17 +5,20 @@
 - title: "Visual Art"
   href: "/visual-art/"
   subcategories:
+    - subtitle: "Visual Art"
+      subhref: "/visual-art/"
     - subtitle: "Mural Gallery"
       subhref: "/visual-art/mural-gallery/"
     - subtitle: "Paintings on Panel"
       subhref: "/visual-art/paintings-on-panel/"
     - subtitle: "Commissions"
       subhref: "/visual-art/commissions/"
-    - subtitle: "Fine Arts"
-      subhref: "/visual-art/fine-arts/"
+    - subtitle: "Artwork"
+      subhref: "/visual-art/artwork/"
     - subtitle: "Graphic Art & Design"
       subhref: "/visual-art/graphic-art-and-design/"
-
+    - subtitle: "Logos & Branding"
+      subhref: "/visual-art/logos-and-branding/"
 - title: "Projects"
   href: "/projects/"
 
