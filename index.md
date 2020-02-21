@@ -4,4 +4,8 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 title: Home
+menus:
+  header:
+    title: Home
+    weight: 1
 ---
