@@ -21,6 +21,7 @@ ol.breadcrumb li a {
 {% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
 {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
 {% assign previous="" %}
+<div class="container">
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
 {% if num_parts == "0" or num_parts == "-1" %}
@@ -41,3 +42,4 @@ ol.breadcrumb li a {
 <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
 </ol>
 </nav>
+</div>
