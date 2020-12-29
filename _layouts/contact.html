@@ -16,9 +16,9 @@ line-height:14px;
     <form role="form" action="{% if page.contact_form != null %}{{ page.contact_form }}{% else %}{{ site.contact_form }}{% endif %}" method="POST">
       <div class="form-group">
       <label for="InputName">Your name</label>
-      <input type="text" name="name" class="form-control" id="InputName" placeholder="Enter name (optional)">
+      <input type="text" name="name" class="form-control" id="InputName" placeholder="Enter name" required>
       <label for="InputEmail1">Email address</label>
-      <input type="email" name="_replyto" class="form-control" id="InputEmail1" placeholder="Enter email (optional)">
+      <input type="email" name="_replyto" class="form-control" id="InputEmail1" placeholder="Enter email" required>
       <label for="InputTel">Your telephone #</label>
       <input type="tel" name="tel" class="form-control" id="InputTel" placeholder="Enter telephone # (optional)">
       <small id="emailHelp" class="form-text text-muted">We'll never share your info with anyone else.</small>
@@ -32,8 +32,6 @@ line-height:14px;
 </div>
     <div class="col-lg-6 col-md-6">
       <address>
-  <!-- <a href="tel:+">Phone: XXX-XXX-XXXX</a><br> -->
-  <h4><a href="mailto:contact@sutfinartindustries.com">Email: contact@sutfinartindustries.com</a></h4>
 </address>
 <a href="https://www.facebook.com/sutfinart" target="_blank"><img src="/img/social-media-icons/f_logo.png" width="30" height="30" title="Facebook" alt="Facebook"/></a>
 <a href="http://www.linkedin.com/in/sutfinart" target="_blank"><img src="/img/social-media-icons/linkedin.png" width="34" height="30" title="Linkedin" alt="Linkedin"/></a>
